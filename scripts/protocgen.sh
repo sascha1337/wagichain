@@ -29,6 +29,7 @@ protoc_gen_gocosmos
 
 buf alpha protoc \
 -I "third_party/proto" \
+--plugin=protoc-gen-doc=./scripts/protoc-gen-doc \
 --doc_opt=./docs/protodoc-markdown.tmpl,proto-docs.md \
 --doc_out=./docs/core \
 $(find "$(pwd)/third_party/proto/cosmos" -maxdepth 4 -name '*.proto') \
